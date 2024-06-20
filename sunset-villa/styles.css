@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Comic Sans', sans-serif; /* Applying the professional font */
+    background-color: #f8f7f4; /* Light gray background */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full viewport height */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px; /* Space between header and container */
+}
+
+.logo {
+    max-width: 500px; /* Adjust the maximum width of the logo */
+    width: 100%; /* Ensure logo fills container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo img {
+    max-width: 100%; /* Ensure logo image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center; /* Center text within container */
+    max-width: 80%; /* Limit container width */
+    width: 100%; /* Ensure container stretches to fit */
+}
+
+/* Button Styling */
+.btn {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Gradient background */
+    color: #ffffff;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    outline: none;
+    position: relative; /* Ensure pseudo-element positions correctly */
+    overflow: hidden; /* Ensure overflow doesn't cause issues */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+.btn span {
+    display: inline-block;
+    transition: transform 0.3s; /* Smooth transition for text */
+}
+
+.btn::after {
+    content: ' →';
+    position: absolute;
+    top: 50%;
+    right: -20px; /* Initial position outside the button */
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, right 0.3s; /* Add transition for smooth movement */
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #4ca1af, #2c3e50); /* Reverse gradient on hover */
+    color: #ffffff;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.btn:hover span {
+    transform: translateX(-15px); /* Move text to the left */
+}
+
+.btn:hover::after {
+    opacity: 1;
+    right: 10px; /* Final position of arrow */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    .logo img {
+        max-width: 400px; /* Reduce max-width of logo for smaller screens */
+    }
+
+    .btn {
+        font-size: 16px; /* Decrease font size of buttons */
+        padding: 10px 20px; /* Adjust padding of buttons */
+    }
+}
+
+
+/* Footer Styling */
+footer {
+    position: fixed; /* Fix footer to the bottom of the viewport */
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    margin-top: 20px; /* Space above the footer */
+    padding: 10px 0;
+    background-color: #2c3e50; /* Dark background for footer */
+    color: #ffffff; /* White text */
+    width: 100%; /* Ensure footer spans full width */
+    font-size: 14px; /* Smaller font size for copyright text */
+}
