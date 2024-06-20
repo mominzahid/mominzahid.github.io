@@ -102,6 +102,11 @@ header {
         font-size: 16px; /* Decrease font size of buttons */
         padding: 10px 20px; /* Adjust padding of buttons */
     }
+
+    body {
+        justify-content: flex-start;
+        padding-top: 10%;
+    }
 }
 
 
