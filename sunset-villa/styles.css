@@ -47,6 +47,7 @@ header {
 
 /* Button Styling */
 .btn {
+    min-width: 350px;
     background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Gradient background */
     color: #ffffff;
     font-size: 18px;
